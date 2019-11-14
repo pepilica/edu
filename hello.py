@@ -8,7 +8,7 @@ import sys
 class Example(QWidget):
     def __init__(self):
         super().__init__()
-        uic.loadUi('circles.ui', self)
+        uic.loadUi('UI.ui', self)
         self.btn.clicked.connect(self.button)
 
     def button(self):
@@ -22,7 +22,7 @@ class Example(QWidget):
 
     def circles(self, qp):
         qp.setBrush(QColor(255, 255, 0))
-        for i in range(choice(1, 4)):
+        for i in range(2):
             size = choice(range(300))
             qp.drawEllipse(choice(range(300)), choice(range(300)),
                            size, size)
